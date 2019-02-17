@@ -1,0 +1,10 @@
+do shell script "/usr/local/bin/screenresolution set 2560x1600x32@0"
+tell application "QuickTime Player"
+	activate
+	new screen recording
+	tell application "System Events" to tell process "QuickTime Player"
+		key code 49
+	end tell
+	do shell script "/usr/local/bin/cliclick -r -m verbose dd:100,100 du:2020,1180"
+	document "Screen Recording" start
+end tell
